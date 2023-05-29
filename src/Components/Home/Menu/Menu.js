@@ -9,6 +9,8 @@ import {
   FaAddressCard,
   FaPhoneAlt,
 } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai"
+
 import { Link } from "react-router-dom";
 
 const Menu = () => {
@@ -73,11 +75,11 @@ const Menu = () => {
 
       <div className="menu py-[20px] bg-[lightGray]">
         <div className="container">
-            <div className="menu__inner flex flex-col lg:flex-row gap-[10px] justify-between items-center ">
+            <div className="menu__inner flex  gap-[10px] justify-between items-center ">
                 <div className="logo">
                     <a href="#!" className="text-[30px] font-[700]"><span className="text-[#EF3D32]">BLOOD</span> BANK</a>
                 </div>
-                <ul className="flex gap-[30px] font-[500] text-[17px]">
+                <ul className="hidden lg:flex gap-[30px] font-[500] text-[17px] ">
                   <li><a href="#!">HOME</a></li>
                   <li><a href="#!">ABOUT US</a></li>
                   <li><a href="#!">CAMPAIGN</a></li>
@@ -85,6 +87,7 @@ const Menu = () => {
                   <li><a href="#!">BLOG</a></li>
                   <li><a href="#!">CONTACT</a></li> 
                 </ul>
+                <span className="cursor-pointer font-[600] text-[25px] block lg:hidden"><AiOutlineMenu /></span>
             </div> 
         </div>
       </div>
