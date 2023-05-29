@@ -1,5 +1,7 @@
 import React from "react";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css/navigation';
 import "./Banner.css";
 
 import "swiper/css";
@@ -42,17 +44,14 @@ const Banner = () => {
   return (
     <div className="banner__section">
       <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        navigation = {{clickable: true}}
         className="banner__swiper"
         spaceBetween={50}
         slidesPerView={1}
-        // loop = {true}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        loop
+        autoplay
       >
-        {/* <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide> */}
         {sliders.map((slider, index) => {
           const { bg, cont1, cont2, btn } = slider;
           return (

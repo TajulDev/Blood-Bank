@@ -1,0 +1,59 @@
+
+.campaign__swiper{
+    padding-bottom: 80px !important;
+}
+
+.campaign__swiper .swiper-wrapper{
+    gap: 20px;
+    padding: 20px 0;
+    z-index: 9;
+}
+
+.campaign__swiper .swiper-wrapper .swiper-slide{
+    
+    margin-right: 0 !important;
+}
+
+.campaign{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+    transition: 0.2s ease-in-out;
+}
+
+.campaign:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.campaign__content{
+    font-family: 'Poppins', sans-serif;
+}
+
+.campaign__content svg{
+    font-size: 18px;
+    color: #E93B31;
+}
+
+.campaign__content h4{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.campaign__swiper .swiper-button-next::after,
+.campaign__swiper .swiper-button-prev::after{
+    /* position: relative; */
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.campaign__swiper .swiper-button-prev{
+    right: 60px;
+    left: unset;
+}
+
+.campaign__swiper .swiper-button-next,
+.campaign__swiper .swiper-button-prev{
+    bottom: 10px;
+    top: unset;
+    padding: 10px 20px;
+    background: #E93B31;
+    border-radius: 4px;
+}

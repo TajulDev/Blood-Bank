@@ -1,0 +1,18 @@
+
+.process:hover h4{
+    background: #EF3D32;
+}
+
+.process h4{
+    bottom: 0;
+    right: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.process h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.process p, .process h4{
+    font-family: 'Poppins', sans-serif;
+}
