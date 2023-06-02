@@ -3,7 +3,7 @@ import './Title.css'
 
 const Title = ({children}) => {
     return (
-            <h2 className="text-[42px] leading-[42px] text-[#555] pb-[10px] mb-[10px] font-[700] relative">
+            <h2 className="Title text-[42px] leading-[42px] text-[#555] pb-[10px] mb-[10px] font-[700] relative">
                 {children}
             </h2>
     );

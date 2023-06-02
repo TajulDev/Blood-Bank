@@ -15,6 +15,7 @@ import campaign2 from "../../../Image/section/campaign2.jpg";
 import campaign3 from "../../../Image/section/campaign3.jpg";
 import Title from "../../../Utils/Title";
 import Subtitle from "../../../Utils/Subtitle";
+import OrgBtn from "../../../Utils/OrgBtn";
 // import { SwiperSlide } from "swiper/react";
 
 const Campaign = () => {
@@ -60,7 +61,7 @@ const Campaign = () => {
   ];
 
   return (
-    <div className="campaign__section">
+    <div className="campaign__section section__gap">
       <div className="container">
         <div className="campaign__inner">
           <div className="campaign__title mb-[48px]">
@@ -87,7 +88,8 @@ const Campaign = () => {
                     campaigns.map(campaign => {
                         const {id, img, icon1, date, title, desc, icon2, time, icon3, address} = campaign;
                         return(
-                            <SwiperSlide className="" key={id}>
+                            <div>
+                              <SwiperSlide className="" key={id}>
                                 <div className="flex campaign">
                                     <img className="max-w-[225px] h-[100%]" src={img} alt="img" />
                                     <div className="campaign__content p-[20px]">
@@ -109,11 +111,16 @@ const Campaign = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </SwiperSlide>
+                              </SwiperSlide>
+                            </div>
                         )
                     })
                 }
             </Swiper>
+            
+            <div className="text-center">
+              <OrgBtn>LOAD ALL CAMPAIGNS</OrgBtn>
+            </div>
           </div>
         </div>
       </div>

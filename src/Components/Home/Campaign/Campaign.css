@@ -1,6 +1,6 @@
 
 .campaign__swiper{
-    padding-bottom: 80px !important;
+    padding-bottom: 55px !important;
 }
 
 .campaign__swiper .swiper-wrapper{
@@ -38,7 +38,6 @@
 
 .campaign__swiper .swiper-button-next::after,
 .campaign__swiper .swiper-button-prev::after{
-    /* position: relative; */
     color: #fff;
     font-size: 24px;
     font-weight: bold;

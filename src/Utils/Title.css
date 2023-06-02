@@ -7,3 +7,7 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+h2.Title, h4.Subtitle{
+    font-family: 'Montserrat', sans-serif;
+}

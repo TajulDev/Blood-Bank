@@ -1,0 +1,63 @@
+.info__bg{
+    background-image: url(../../../Image/bg/holdingHeart.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.info__content h2{  
+    margin: 10px 0 32px;
+}
+
+.info__content h4{
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.info__content h4::before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100px;
+    background: #E93B31;
+    left: 0;
+    bottom: 0;
+}  
+
+.info__content ul li{
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 26px;
+    color: #575755;
+    /* font-weight: 500; */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.info__content ul li::before{
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    border: 1px solid #E93B31;
+    border-radius: 50%;
+}
+
+.info__form form{
+    font-family: 'Poppins', sans-serif;
+}
+
+.info__form h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+form input,
+ form select,
+  form textarea {
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    text-align: #575757;
+}
