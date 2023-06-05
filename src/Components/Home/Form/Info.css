@@ -1,3 +1,7 @@
+.info__section{
+    background: #F9FAFB;
+}
+
 .info__bg{
     background-image: url(../../../Image/bg/holdingHeart.jpg);
     background-position: center;
@@ -60,4 +64,34 @@ form input,
     outline: none;
     border: none;
     text-align: #575757;
+}
+
+.counter{
+    position: relative;
+}
+
+.counter svg{
+    margin: auto;
+}
+
+/* .counter:hover  span{
+    margin-top: -5px;
+    display: inline-block;
+} */
+
+.counter span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45px;
+    transition: 0.3s ease-in-out;
+}
+
+.counter:hover span{
+    top: 40px;
+    color: #E93B31;
+}
+
+.counter h4{
+    font-family: 'Poppins', sans-serif;
 }

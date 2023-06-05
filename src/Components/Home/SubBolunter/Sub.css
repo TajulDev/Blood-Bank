@@ -1,0 +1,35 @@
+.sub__boln{
+    background-image: url(../../../Image/bg/bolunter.png);
+    background-position: center center;
+    background-size: contain;
+    background-size: initial;
+    background-attachment: fixed;
+    /* background-repeat: repeat; */
+    position: relative;
+    overflow: hidden;
+}
+
+.sub__boln::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #EF3D32;
+    opacity: 0.9;
+    z-index: 9;
+}
+
+.sub__inner{
+    z-index: 99;
+    position: relative;
+}
+
+.sub__inner h3{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sub__inner p{
+    font-family: 'Poppins', sans-serif;
+}

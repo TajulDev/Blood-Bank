@@ -18,19 +18,19 @@ const Form = () => {
     onSubmit: (values, { resetForm }) => {
       console.log(values);
       resetForm({ values: "" });
-      localStorage.setItem("doner", JSON.stringify([...data,values]));                  
+      localStorage.setItem("donar", JSON.stringify([...data,values]));                  
       setData(current=>[...current,values])
     },  
     
   });
 
   const handleDelete =()=>{
-    localStorage.removeItem("doner")
+    localStorage.removeItem("donar")
     setData("")
   } 
 
   useEffect(()=>{
-    const newData = localStorage.getItem("doner")
+    const newData = localStorage.getItem("donar")
     if(newData){
       setData(JSON.parse(newData))
     } 
@@ -40,19 +40,19 @@ const Form = () => {
   console.log(data,"dddd")
 
   return (
-    <div className="info__form max-w-[555px]">
+    <div className="info__form w-[100%] lg:max-w-[555px]">
       <div>
-        <h3 className="form__title text-[28px] leading-[36px] text-[#fff] p-[30px] bg-[#4E4E4E] font-[700] text-center"> 
+        <h3 className="form__title text-[22px] sm:text-[28px] leading-[36px] text-[#fff] p-[20px] sm:p-[30px] bg-[#4E4E4E] font-[700] text-center"> 
           {/* {" "} */}
           REQUEST APPOINTMENT
         </h3>
       </div>
-      <div className="px-[35px] pt-[40px] pb-[20px] bg-[#eaedf1]">
+      <div className="p-[25px] sm:px-[35px] sm:pt-[40px] sm:pb-[20px] bg-[#eaedf1]">
         <form
           onSubmit={formik.handleSubmit}
           className="grid -grid-cols-1 gap-[24px]"
         >    
-          <div className="grid grid-cols-2 gap-[35px]">
+          <div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[35px]">
             <input
               onChange={formik.handleChange}
               placeholder="Name"
@@ -72,7 +72,7 @@ const Form = () => {
               required
             />
           </div>
-          <div className="grid grid-cols-2 gap-[35px]">
+          <div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[35px]">
             <input
               onChange={formik.handleChange}
               placeholder="Phone"
@@ -96,7 +96,7 @@ const Form = () => {
               <option value="Chittagong">Chittagong</option>
             </select>
           </div>
-          <div className="grid grid-cols-2 gap-[35px]">
+          <div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[35px]">
             <input
               onChange={formik.handleChange}
               placeholder="Date"
@@ -147,7 +147,7 @@ const Form = () => {
         <p>{item?.date}</p>
         <p>{item?.time}</p>
         <p>{item?.comment}</p> 
-        {/* <button onClick={handleDelete}>delete</button> */}
+        {/* <button onClick={handleDelete}>delete</button> */}  
         </div>)}
       </div>
     </div>

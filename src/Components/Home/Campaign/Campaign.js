@@ -119,7 +119,7 @@ const Campaign = () => {
             </Swiper>
             
             <div className="text-center">
-              <OrgBtn>LOAD ALL CAMPAIGNS</OrgBtn>
+              <button><OrgBtn>LOAD ALL CAMPAIGNS</OrgBtn></button>
             </div>
           </div>
         </div>
