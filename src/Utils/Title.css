@@ -1,11 +1,12 @@
 .Title h2::after{
     position: absolute;
     content: "";
-    height: 3px;
+    height: 2px;
     width: 100px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    background: #EF3D32;
 }
 
 h2.Title, h4.Subtitle{

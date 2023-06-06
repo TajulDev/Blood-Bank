@@ -1,3 +1,7 @@
+import React from 'react';
+import Lightbox from 'react-image-lightbox';
+
+
 const photos = [
     {src: 'https://source.unsplash.com/2ShvY8Lf6l0/800x599', width:4, height:3},
     {src: 'https://source.unsplash.com/Dm-qxdynoEc/800x799', width:1, height:1},
@@ -10,7 +14,7 @@ const photos = [
     {src: 'https://source.unsplash.com/I1ASdgphUH4/800x599', width:4, height:3}
   ];
   
-  class App extends React.Component{
+  export default class GG extends React.Component{
     constructor(){             
       super();                 
       this.state = { currentImage: 0 }; 
@@ -45,7 +49,7 @@ const photos = [
     render(){
       return(
         <div>
-          <Gallery photos={photos} onClick={this.openLightbox} />
+          {/* <Gallery photos={photos} onClick={this.openLightbox} /> */}
           <Lightbox images={photos}
             onClose={this.closeLightbox}
             onClickPrev={this.gotoPrevious}
@@ -57,4 +61,3 @@ const photos = [
       )
     }
   }
-  ReactDOM.render(<App />, document.getElementById('app'));

@@ -76,6 +76,10 @@ const Campaign = () => {
             <Swiper
               slidesPerView={2}
               spaceBetween={30}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                1110: { slidesPerView: 2 }
+              }}
               freeMode={true}
               loop
               navigation={{
@@ -90,8 +94,8 @@ const Campaign = () => {
                         return(
                             <div>
                               <SwiperSlide className="" key={id}>
-                                <div className="flex campaign">
-                                    <img className="max-w-[225px] h-[100%]" src={img} alt="img" />
+                                <div className="flex flex-col sm:flex-row campaign">
+                                    <img className="max-w-[100%] sm:max-w-[225px] h-[100%]" src={img} alt="img" />
                                     <div className="campaign__content p-[20px]">
                                         <div className="flex gap-[8px] items-center">
                                             <span>{icon1}</span>
