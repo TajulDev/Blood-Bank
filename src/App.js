@@ -2,6 +2,7 @@ import './App.css';
 import GG from './Components/Bla';
 import Banner from './Components/Home/Banner/Banner';
 import Campaign from './Components/Home/Campaign/Campaign';
+import Footer from './Components/Home/Footer/Footer';
 import Info from './Components/Home/Form/Info';
 import Gallery from './Components/Home/Gallery/Gallery';
 import Menu from './Components/Home/Menu/Menu';
@@ -20,6 +21,7 @@ function App() {
       <Sub></Sub>
       <Gallery></Gallery>
       <News></News>
+      <Footer></Footer>
     </div>
   );
 }

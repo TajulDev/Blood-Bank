@@ -1,0 +1,15 @@
+.footer__section{
+    background: #1A1A1A;
+    color: #fff;
+    padding: 100px 0 80px;
+}
+
+.footer__top{
+    padding-bottom: 50px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #2C2C2C;
+}
+
+.footer__top p{
+    font-family: 'Poppins', sans-serif;
+}
