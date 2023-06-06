@@ -24,7 +24,12 @@ const Footer = () => {
           </div>
           <div className="footer__mid">
             <div>
-                <h4 className="uppercase">Contact Us</h4>
+                <h4 className="uppercase text-[24px] leading-[36px] mb-[20px]">Contact Us</h4>
+                <ul>
+                    <li><a href="!#">support@donation.com</a> <br /> <a href="#!">helpme@gmail.com</a></li>
+                    <li><a href="!#">Road-2,3/A East Shibgonj Sylhet-3100, Bangladesh</a></li>
+                    <li><a href="!#">Office: (+880) 1234567</a> <br /> <a href="#!">Cell: (+880) 1234567</a></li> 
+                </ul>
             </div>
           </div>
           <div className="footer__bot"></div>
