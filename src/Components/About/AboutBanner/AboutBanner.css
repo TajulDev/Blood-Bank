@@ -1,0 +1,24 @@
+.about__banner{
+    background-image: url(../../../Image/bg/aboutBanner.jpg);
+    /* background-position: center; */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.about__banner::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    z-index: 9;
+}
+
+.about__banner h2, .about__banner p{
+    color: #fff !important;
+    z-index: 99;
+    position: relative;
+}
