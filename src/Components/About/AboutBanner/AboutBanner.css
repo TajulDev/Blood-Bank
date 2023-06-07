@@ -2,8 +2,6 @@
     background-image: url(../../../Image/bg/aboutBanner.jpg);
     /* background-position: center; */
     /* background-size: cover; */
-    background-repeat: no-repeat;
-    position: relative;
 }
 
 .about__banner::before{
@@ -21,4 +19,4 @@
     color: #fff !important;
     z-index: 99;
     position: relative;
-}
+}  

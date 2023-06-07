@@ -5,7 +5,7 @@ import './AboutBanner.css'
 
 const AboutBanner = () => {
     return (
-        <div className='about__banner py-[100px]'>
+        <div className='about__banner py-[100px] relative bg-no-repeat'>
             <div className="container">
                 <div className="aboutBanner__inner flex justify-center">
                     <div>
