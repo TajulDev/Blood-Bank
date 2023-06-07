@@ -7,3 +7,21 @@
 }
 
 .menu__inner ul{font-family: 'Poppins', sans-serif;}
+
+.mobile__menu{
+    transform: translateX(-100%);
+}
+
+.menu__open{
+    transform: translateX(0);
+}
+
+.menu__open ul li a, .mobile__menu ul li a{
+    padding: 20px 0;
+    display: block;
+    border-bottom: 1px solid #EF3D32;
+}
+
+.menu__open ul li:last-child a, .mobile__menu ul li:last-child a{
+    border-bottom: 0px;
+}

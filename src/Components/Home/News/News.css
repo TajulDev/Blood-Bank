@@ -1,7 +1,7 @@
 .news__boxes{
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto auto auto;
-    gap: 25px;
+    gap: 25px; */
 }
 
 .news__box{

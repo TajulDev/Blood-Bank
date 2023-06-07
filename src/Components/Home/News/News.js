@@ -59,7 +59,7 @@ const News = () => {
               Latest news and statements regarding giving blood processing
             </Subtitle>
           </div>
-          <div className="news__boxes grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-[40px]">
+          <div className="news__boxes grid sm:grid-cols-2 lg:grid-cols-3 mb-[40px] gap-[25px]">
             {newses.map((news) => {
               const { id, img, plusI, title, timeI, time, comI, com, cont } =
                 news;
