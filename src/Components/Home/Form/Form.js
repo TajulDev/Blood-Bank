@@ -148,7 +148,7 @@ const Form = () => {
         <p>{item?.time}</p>
         <p>{item?.comment}</p> 
         {/* <button onClick={handleDelete}>delete</button> */}  
-        </div>)}
+        </div>)}  
       </div>
     </div>
   );

@@ -116,8 +116,8 @@ const Menu = () => {
       <div
         className={
           display
-            ? "menu__open p-[40px] absolute left-0 top-0 w-[100%] sm:w-[50%] h-[100vh] bg-[#000] text-[#fff] z-[999]"
-            : " mobile__menu  p-[40px] absolute left-0 top-0 w-[100%] sm:w-[50%] h-[100vh] bg-[#000] text-[#fff] z-[999]"
+            ? "menu__open p-[40px] absolute left-0 top-0 w-[100%] sm:w-[50%] h-[100%] bg-[#000] text-[#fff] z-[999]"
+            : " mobile__menu  p-[40px] absolute left-0 top-0 w-[100%] sm:w-[50%] h-[100%] bg-[#000] text-[#fff] z-[999]"
         }
       >
         <div className="mobile__top flex items-center justify-between mb-[30px]">

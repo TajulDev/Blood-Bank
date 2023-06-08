@@ -7,12 +7,10 @@ import Info from './Form/Info';
 import Sub from './SubBolunter/Sub';
 import Gallery from './Gallery/Gallery';
 import News from './News/News';
-import Footer from './Footer/Footer';
 
 const Home = () => {
     return (
         <div>
-            {/* <Menu></Menu> */}
             <Banner></Banner>
             <Process></Process>
             <Campaign></Campaign>
@@ -20,7 +18,6 @@ const Home = () => {
             <Sub></Sub>
             <Gallery></Gallery>
             <News></News>
-            {/* <Footer></Footer> */}
         </div>
     );
 };

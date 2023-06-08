@@ -1,0 +1,49 @@
+.work__content{
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease-in-out;
+}
+
+.work__content:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.work__content ul li{
+    font-size: 16px;
+    line-height: 36px;
+    padding-left: 26px;
+    color: #575755;
+    /* font-weight: 500; */
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.work__content ul li::before{
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px;
+    width: 8px;
+    border: 1px solid #E93B31;
+    border-radius: 50%;
+}
+
+.work__content p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.work__vid{
+    background-image: url(../../../Image/section/workflow.jpg);
+}
+
+.work__vid::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #0000005e;
+    z-index: -1;
+}
