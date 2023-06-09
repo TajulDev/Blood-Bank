@@ -3,10 +3,11 @@ import OrgBtn from "../../../Utils/OrgBtn";
 import { useFormik } from "formik";
 
 const Form = () => {
-
-  const [data, setData]= useState([])
+  const [data, setData] = useState([]);
+  const [image, setImage] = useState(null);
   const formik = useFormik({
     initialValues: {
+      avatar: "",
       name: "",
       email: "",
       phone: "",
@@ -17,41 +18,48 @@ const Form = () => {
     },
     onSubmit: (values, { resetForm }) => {
       console.log(values);
+
+      const newData = { ...values, image };
       resetForm({ values: "" });
-      localStorage.setItem("donar", JSON.stringify([...data,values]));                  
-      setData(current=>[...current,values])
-    },  
-    
+      localStorage.setItem("donar", JSON.stringify([...data, newData]));
+      setData((current) => [...current, newData]);
+    },
   });
 
-  const handleDelete =()=>{
-    localStorage.removeItem("donar")
-    setData("")
-  } 
+  const handleDelete = () => {
+    localStorage.removeItem("donar");
+    setData("");
+  };
 
-  useEffect(()=>{
-    const newData = localStorage.getItem("donar")
-    if(newData){
-      setData(JSON.parse(newData))
-    } 
+  useEffect(() => {
+    const newData = localStorage.getItem("donar");
+    if (newData) {
+      setData(JSON.parse(newData));
+    }
+  }, []);
 
-  },[])
-
-  console.log(data,"dddd")
-
+  const fiilehandler = (e) => {
+    // console.log();
+    const fileImage = e.target.files[0];
+    const createdURL = URL.createObjectURL(fileImage);
+    setImage(createdURL);
+  };
   return (
     <div className="info__form w-[100%] lg:max-w-[555px]">
       <div>
-        <h3 className="form__title text-[22px] sm:text-[28px] leading-[36px] text-[#fff] p-[20px] sm:p-[30px] bg-[#4E4E4E] font-[700] text-center"> 
+        <h3 className="form__title text-[22px] sm:text-[28px] leading-[36px]
+         text-[#fff] p-[20px] sm:p-[30px] bg-[#4E4E4E] font-[700] text-center">
           {/* {" "} */}
           REQUEST APPOINTMENT
         </h3>
       </div>
+      {/* <h1> Image {image ? "image ache " : "Image nai"}</h1> */}
+      <img src={image} alt="" />
       <div className="p-[25px] sm:px-[35px] sm:pt-[40px] sm:pb-[20px] bg-[#eaedf1]">
         <form
           onSubmit={formik.handleSubmit}
           className="grid -grid-cols-1 gap-[24px]"
-        >    
+        >
           <div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[35px]">
             <input
               onChange={formik.handleChange}
@@ -69,7 +77,7 @@ const Form = () => {
               name="email"
               id="email"
               value={formik.values.email}
-              required
+              // required
             />
           </div>
           <div className="grid sm:grid-cols-2 gap-[20px] sm:gap-[35px]">
@@ -80,14 +88,14 @@ const Form = () => {
               name="phone"
               id="phone"
               value={formik.values.phone}
-              required
+              // required
             />
             <select
               onChange={formik.handleChange}
               name="center"
               id="center"
               value={formik.values.center}
-              required
+              // required
             >
               <option value="" selected>
                 Donation Center
@@ -111,7 +119,17 @@ const Form = () => {
               type="text"
               name="time"
               id="time"
-              value={formik.values.time} 
+              value={formik.values.time}
+            />
+          </div>
+          <div>
+            <input
+              onChange={(e) => fiilehandler(e)}
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept="image/png, image/jpeg"
+              // Value="C:\\fakepath\\1.jpg"
             />
           </div>
           <div>
@@ -129,26 +147,6 @@ const Form = () => {
             <OrgBtn>BECOME A VOLUNTER</OrgBtn>
           </button>
         </form>
-
-        {/* <button onClick={handleDelete}>delete</button>
-        <p>{data?.name}</p>
-        <p>{data?.email}</p>
-        <p>{data?.phone}</p>
-        <p>{data?.center}</p>
-        <p>{data?.date}</p>
-        <p>{data?.time}</p>
-        <p>{data?.comment}</p> */}
-
-        {data.map(item=><div className="bg-red-400 p-5 m-5">
-          <p>{item?.name}</p>
-        <p>{item?.email}</p>
-        <p>{item?.phone}</p>
-        <p>{item?.center}</p>
-        <p>{item?.date}</p>
-        <p>{item?.time}</p>
-        <p>{item?.comment}</p> 
-        {/* <button onClick={handleDelete}>delete</button> */}  
-        </div>)}  
       </div>
     </div>
   );

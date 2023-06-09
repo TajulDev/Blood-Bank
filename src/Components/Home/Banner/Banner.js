@@ -75,8 +75,10 @@ const Banner = () => {
                       {cont2}
                     </h2>
                     <div className="banner__btn flex flex-col md:flex-row  gap-[20px] items-start">
-                      {btn?.botton1 && <OrgBtn>{btn?.botton1}</OrgBtn>}
-                      {btn?.botton2 && <NgBtn>{btn?.botton2}</NgBtn>}
+                      <a href="#!">
+                        {btn?.botton1 && <OrgBtn>{btn?.botton1}</OrgBtn>}
+                        {btn?.botton2 && <NgBtn>{btn?.botton2}</NgBtn>}
+                      </a>
                     </div>
                   </div>
                 </div>
