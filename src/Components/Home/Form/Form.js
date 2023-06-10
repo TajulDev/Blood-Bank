@@ -51,7 +51,7 @@ const Form = () => {
          text-[#fff] p-[20px] sm:p-[30px] bg-[#4E4E4E] font-[700] text-center">
           {/* {" "} */}
           REQUEST APPOINTMENT
-        </h3>
+        </h3>   
       </div>
       {/* <h1> Image {image ? "image ache " : "Image nai"}</h1> */}
       <img src={image} alt="" />

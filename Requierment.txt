@@ -1,0 +1,10 @@
+# Blood Bank:
+=> Hi there, i need a front-end website using react js and html, css . 
+It will be a blood bank web application. 
+in the front page there will be a dedicated volounteer section where will be a form.
+In that form the valounteer can add his name, age,  area, blood group and last blood donate date. 
+When he submit the form, the information will add in about page. 
+let me know if you can do that things.
+Note: I don't have any clear ui. you can start from scatch. 
+
+
