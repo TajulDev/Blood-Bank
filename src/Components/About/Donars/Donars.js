@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Donar.css'
+import OrgBtn from '../../../Utils/OrgBtn'
 
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
+import happyDonars from '../../../Image/bg/happyPeoples.jpg'
 import happyDonar1 from '../../../Image/section/donar3.jpg'
 import happyDonar2 from '../../../Image/section/donar2.jpg'
 import happyDonar3 from '../../../Image/section/donar3.jpg'
@@ -75,22 +77,11 @@ const Donars = () => {
 
     return (
         <section className='donars__section pb-[80px]'>
-        <div className='section__img relative'>
-            {/* <img className='w-[100%] h-[600px] object-cover' src={happyDonar} alt="img" /> */}
+        <div className='section__img'>
+            <img className='w-[100%] h-[600px] object-cover' src={happyDonars} alt="img" />
         </div>
             <div className="container">
-                <div className="doners__inner grid grid-cols-3 gap-[24px]">
-                    {/* {
-                        donars.map((donar, index)=>{
-                            const {name, avatar} = donar
-                            return(
-                                <div className='donar' key={index}>
-                                    <p>{name}</p>
-                                    <img src={avatar} alt="" />
-                                </div>
-                            )
-                        })
-                    } */}
+                <div className="doners__inner grid grid-cols-2 md:grid-cols-3 gap-[24px] mt-[-140px]">
                     {
                         Volunteer.map((volunteer, index)=>{
                             const {id, name, img, group, phone, location, fb, twt, ins, ldn, fbLink, twtLink, ldnLink, instLink} = volunteer
@@ -114,6 +105,9 @@ const Donars = () => {
                             )
                         })   
                     }
+                </div>
+                <div className='text-center mt-[48px]'>
+                    <button><OrgBtn>BECOME A VOLUNTEER</OrgBtn> </button>
                 </div>
             </div>
         </section>
