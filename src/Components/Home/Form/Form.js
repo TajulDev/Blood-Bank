@@ -209,6 +209,10 @@ const Form = () => {
   const [group, setGroup] = useState("");
   const [comment, setComment] = useState("");
 
+  const handleDlt = () =>{
+    const allData = ("Name", "Email", 'Group')
+    localStorage.removeItem(allData)
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -244,6 +248,8 @@ const Form = () => {
       setDate("")
       setTime("")
       setGroup("")
+
+      toast.success("Form Submit Successfully !")
     }
   };
 
@@ -360,6 +366,7 @@ const Form = () => {
             <OrgBtn>BECOME A VOLUNTER</OrgBtn>
           </button>
         </form>
+          {/* <button onClick={handleDlt}>dlt</button> */}
       </div>
     </div>
   );
