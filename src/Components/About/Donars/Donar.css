@@ -8,6 +8,10 @@
     background-color: #0000005e;
 }
 
+.donars__section{
+    background: #F7F7F7;
+}
+
 .donar {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
     transition: 0.3s ease-in-out;
@@ -35,4 +39,10 @@ ul.social li a{
     border: 1px solid #EEEEEE;
     color: #EF3D32;
     font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+    .doners__inner{
+        grid-template-columns: auto;
+    }
 }
