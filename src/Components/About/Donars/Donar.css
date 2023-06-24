@@ -7,3 +7,32 @@
     top: 0;
     background-color: #0000005e;
 }
+
+.donar {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease-in-out;
+}
+
+.donar:hover{
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.donar p{
+    font-size: 18px;
+}
+
+.donar p span{
+    font-weight: 500;
+}
+
+ul.social li a{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #EEEEEE;
+    color: #EF3D32;
+    font-size: 18px;
+}

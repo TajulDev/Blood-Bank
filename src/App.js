@@ -7,6 +7,8 @@ import Menu from './Components/Home/Menu/Menu';
 import Footer from './Components/Home/Footer/Footer';
 import CampaignPage from './Components/CampaignPage/CampaignPage';
 
+import { ToastContainer, toast } from 'react-toastify';
+
 function App() {
   return (
     <div>
@@ -17,6 +19,7 @@ function App() {
         <Route path="/campaign" element={<CampaignPage></CampaignPage>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
